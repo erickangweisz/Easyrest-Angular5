@@ -1,0 +1,11 @@
+com\jkang\technicaltest\service\UserService.class
+com\jkang\technicaltest\dao\UserRoleDao.class
+com\jkang\technicaltest\cors\CORSFilter.class
+com\jkang\technicaltest\util\HibernateUtil.class
+com\jkang\technicaltest\model\UserRole.class
+com\jkang\technicaltest\service\UserRoleService.class
+com\jkang\technicaltest\dao\RoleDao.class
+com\jkang\technicaltest\model\User.class
+com\jkang\technicaltest\security\SecurityInterceptor.class
+com\jkang\technicaltest\dao\UserDao.class
+com\jkang\technicaltest\model\Role.class

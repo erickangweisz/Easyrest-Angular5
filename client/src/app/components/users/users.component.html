@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h3 class="text-center">{{ title }} <i class="fa fa-users" aria-hidden="true"></i></h3>
+    <hr>
+    <div class="container-fluid">
+        <div *ngIf="users.length == 0">
+            <h4 class="text-center">the user list is empty, create a user</h4>
+        </div>
+        <div class="row">
+            <div *ngFor="let user of users" class="col-3">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">{{ user.name }}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">id: {{ user.id }}</h6>
+                            <a routerLink="/user/{{ user.id }}" routerLinkActive="active" class="btn btn-primary btn-sm">view <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            <button (click)="deleteUser(user.id)" class="btn btn-danger btn-sm">delete <i class="fa fa-times" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <button type="button" routerLink="/user-form" class="btn btn-success btn-sm nav-link pull-right">create new user</button>
+            </div>
+        </div>
+    </div>
+</div>

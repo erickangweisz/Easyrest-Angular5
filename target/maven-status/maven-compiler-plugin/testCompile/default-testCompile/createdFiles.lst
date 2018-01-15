@@ -1,0 +1,7 @@
+com\jkang\technicaltest\testsuite\TestRunner.class
+com\jkang\technicaltest\model\RoleTest.class
+com\jkang\technicaltest\service\UserServiceTest.class
+com\jkang\technicaltest\service\UserRoleServiceTest.class
+com\jkang\technicaltest\model\UserRoleTest.class
+com\jkang\technicaltest\model\UserTest.class
+com\jkang\technicaltest\testsuite\JunitTestSuite.class

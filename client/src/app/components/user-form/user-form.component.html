@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <h3 class="text-center"><i class="fa fa-plus-circle" aria-hidden="true"></i> {{ title }}</h3>
+    <hr>
+    <div class="col-4 offset-4">
+        <button type="button" class="btn btn-primary btn-sm nav-link" routerLink="/users" routerLinkActive="active"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+        <div class="card">
+            <div class="container">
+                <br>
+                <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+                    <div class="form-group">
+                        <label for="name">NAME</label>
+                        <input type="text" #name="ngModel" name="name" class="form-control form-control-sm" ngModel required>
+                        <br>
+                        <div *ngIf="roleNotSelected" class="alert alert-info text-center" role="alert">
+                            Oops! you must first select a role
+                        </div>
+                        <ss-multiselect-dropdown [options]="roles" [(ngModel)]="rolesModel" name="roles" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+                    </div>
+                    <button class="btn btn-success btn-sm pull-right">Create new user</button>
+                </form>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
